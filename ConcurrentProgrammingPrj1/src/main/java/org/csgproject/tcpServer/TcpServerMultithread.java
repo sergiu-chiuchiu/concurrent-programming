@@ -37,20 +37,25 @@ public class TcpServerMultithread extends Thread {
 
     public void run() {
         try {
+            System.out.println("New connection at port " + clSocket.getPort());
             send = new PrintWriter(clSocket.getOutputStream(), true);
             receive = new BufferedReader(new InputStreamReader(clSocket.getInputStream()));
             csm = new CommunicationStateManager();
 
             // Initial response
             String receivedLine = receive.readLine();
-            send.println("Hello, what is your name?");
+            send.println("Hello, you have been assigned to port " + clSocket.getPort() + ". What is your name?");
 
             while ((receivedLine = receive.readLine()) != null) {
                 if (ClientRequest.END_CONNECTION.equals(receivedLine)) {
                     send.println(ServerResponse.END_CONNECTION_SERVER_CONFIRMATION);
                     break;
                 }
-                communicateWithClient(receivedLine, csm.getCommunicationState());
+                if ((csm.getCommunicationState().equals(CommunicationState.INITIALIZING)) || receivedLine.equals("1") || receivedLine.equals("2") || receivedLine.equals("3")) {
+                    communicateWithClient(receivedLine, csm.getCommunicationState());
+                } else {
+                    send.printf(ServerResponse.MAIN_MENU, clientName).println();
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

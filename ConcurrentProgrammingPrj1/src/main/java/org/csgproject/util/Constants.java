@@ -12,15 +12,11 @@ public final class Constants {
         public static final String USERS_CONNECTED_MENU = "The users currently connected are: %s. Would you like to do something else? 1. Yes 2. No";
         public static final String GREETING_MENU = "Greetings you too! Would you like to do something else? 1. Yes 2. No";
         public static final String ASK_CLOSE_CONNECTION_CONFIRMATION = "Are you sure you want to terminate the connection? 1. Yes 2. No";
-
     }
 
     public static final class ClientRequest {
         public ClientRequest() {}
         public static final String END_CONNECTION = "END_CONNECTION";
-        public static final String GREET_SERVER = "GREET_SERVER";
-        public static final String DISPLAY_USERS_CONNECTED = "BUY_COOKIE";
-
     }
 
 
