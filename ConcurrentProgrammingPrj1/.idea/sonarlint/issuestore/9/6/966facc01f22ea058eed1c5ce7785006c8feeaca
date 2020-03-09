@@ -1,0 +1,6 @@
+
+~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ο°τλύÿÿÿÿ8ρν–ά‹.
+^squid:S1854-"@Remove this useless assignment to local variable "receivedLine".(ς…¶Γ8ρν–ά‹.
+Xsquid:S1161&":Add the "@Override" annotation above this method signature(“–ύώ8ρν–ά‹.
+Fsquid:S1148""#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ρν–ά‹.
+Fsquid:S11488"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8ρν–ά‹.
