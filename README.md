@@ -1,3 +1,3 @@
 # concurrent-programming
 
-Ths is the repository for the Concurrent and Distributed Programming
+Ths is the repository for the Concurrent and Distributed Programming projects
