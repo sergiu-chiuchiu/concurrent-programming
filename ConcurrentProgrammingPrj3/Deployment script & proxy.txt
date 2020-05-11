@@ -1,4 +1,0 @@
-./cloud_sql_proxy -instances=gclcinema:europe-west3:pginstace=tcp:5432 \
-                  -credential_file=gclcinema-0ce0c9dbf302.json &
-
-mvn package appengine:deploy -Dapp.deploy.projectId=gclcinema -DskipTests
